@@ -21,13 +21,12 @@ window.onload = function () {
 
   // input
   const radius = params.get("r")
-  console.lag(radius)
 
   // process
-  const volume = (4 / 3) * Math.PI * Math.pow(radius, 3)
-  const roundedVolume = volume.toFixed(2)
+  const volume = (4 / 3) * Math.PI * radius ** 3
+  const dimenstion = "Radius (r) = " + radius + " units"
 
   // output
-  document.getElementById("dimenstion").innerHTML = "r = " + radius
-  document.getElementById("output").innerHTML = "V = " + roundedVolume + "cm³"
+  document.getElementById("radius ").innerHTML = dimenstion
+  document.getElementById("volume").innerHTML = "Volume (V) = " + volume.toFixed(2) + " units³"
 }
