@@ -16,17 +16,17 @@ if (navigator.serviceWorker) {
 }
 
 window.onload = function () {
-
-  const params = new URLSearchParams(window.location.search)
+  // this calculates the volume of a sphere
+  const params = new URLSearchParams(document.location.search)
 
   // input
-  const radius = params.get("r")
+  const radius = params.get('r')
 
   // process
   const volume = (4 / 3) * Math.PI * radius ** 3
-  const dimenstion = "Radius (r) = " + radius + " units"
+  const dimensions = 'Radius (r) = ' + radius + ' units'
 
   // output
-  document.getElementById("radius ").innerHTML = dimenstion
-  document.getElementById("volume").innerHTML = "Volume (V) = " + volume.toFixed(2) + " units³"
+document.getElementById('radius').innerHTML = dimensions
+document.getElementById('volume').innerHTML = 'Volume (V) = ' + volume.toFixed(2) + ' units³'
 }
